@@ -1,0 +1,40 @@
+.navbar-fsp{
+    background-color: var(--color-fsp);
+    height: 13em;
+    display:grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    padding:  0 2em;
+}
+
+.img-logo{
+    background: url(../../../assets/Images/fashions-park-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15em;
+    height: 2em;
+    display:block;
+}
+
+.img-user{
+    background: url(../../../assets/Images/imguser.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    display:block;
+}
+
+.user-area{
+    border: .1em solid rgba(255, 255, 255, 0.3);
+    border-radius:50em;
+    width: 30%;
+    height: 60%;
+}
+
+.row-logo{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+

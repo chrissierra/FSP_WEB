@@ -1,0 +1,19 @@
+.img-user {
+    background: url(../../../assets/Images/imguser.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    display:block;
+    border-radius: 50%;
+    margin-left: .5em;
+    
+}
+
+.user-area {
+    border: .2em solid rgba(255, 255, 255, 0.2);
+    border-radius: 50em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+}

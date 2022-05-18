@@ -10,31 +10,18 @@
     background: url(../../../assets/Images/fashions-park-logo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 15em;
+    flex-grow: 4;
     height: 2em;
     display:block;
 }
 
-.img-user{
-    background: url(../../../assets/Images/imguser.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 2em;
-    height: 2em;
-    display:block;
+app-user-area {
+    flex-grow: 3;
 }
 
-.user-area{
-    border: .1em solid rgba(255, 255, 255, 0.3);
-    border-radius:50em;
-    width: 30%;
-    height: 60%;
-}
-
-.row-logo{
+.row-logo {
     display:flex;
     align-items: center;
     justify-content: space-between;
-
 }
 

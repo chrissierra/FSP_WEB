@@ -6,6 +6,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavbarLightComponent } from './shared/navbar-light/navbar-light.component';
 import { UserAreaComponent } from './components/user-area/user-area.component';
 
+import { CookieService } from 'ngx-cookie-service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,7 @@ import { UserAreaComponent } from './components/user-area/user-area.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

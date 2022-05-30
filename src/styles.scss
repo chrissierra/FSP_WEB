@@ -21,6 +21,14 @@ $font-family-sans-serif: 'Montserrat', sans-serif;
 }
 
 
+
+// Merge the maps
+$color-fsp:       #aa0033;
+$custom-colors: (
+  "color-fsp": $color-fsp
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
 /* // Creación mapa de colores
 $colores-fsp: (
   "color-fsp": #aa0033
@@ -35,5 +43,11 @@ $theme-colors: map-merge($theme-colors, $colores-fsp);
     
 } */
 
+// Required
+@import "../node_modules/bootstrap/scss/variables";
 
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap-icons/";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

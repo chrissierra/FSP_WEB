@@ -8,14 +8,20 @@
     --color-fsp: #aa0033;
     --color-fsp-light: #FFFFFF;
     --color-fsp-gray: #DDDDDD;
-
-
 }
 
 // FONT:
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
-// Creación mapa de colores
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* // Creación mapa de colores
 $colores-fsp: (
   "color-fsp": #aa0033
 );
@@ -27,7 +33,7 @@ $theme-colors: map-merge($theme-colors, $colores-fsp);
     height: 15em;
     background-color:  map.get($colores-fsp, "color-fsp");
     
-}
+} */
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

@@ -10,6 +10,7 @@ import { SignInService } from 'src/app/services/sign-in.service';
 export class NavbarComponent implements OnInit {
 
   constructor(private signInService: SignInService, private sessionService: SessionService) { }
+  public useIconVar: boolean= true;
 
   ngOnInit(): void {
 
@@ -60,6 +61,11 @@ fetch(yourUrl, {
 
     
 
+  }
+
+  testing_button_event(event: any){
+    alert("asdffdsa")
+    console.log(event)
   }
 
 }

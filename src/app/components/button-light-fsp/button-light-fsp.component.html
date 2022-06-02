@@ -1,0 +1,10 @@
+<button type="button" 
+        class="btn btn-light btn-fsp-light"
+        [style.min-width]="minWidthPropValue"
+        (click)="onClickEvent()">
+                <i *ngIf="useIcon" 
+                [className]="classIcon" 
+                class="bi"></i>
+                <span class="text_button">{{ nombre }}</span>
+
+</button>

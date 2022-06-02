@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fspdev-dcd91": {
+      "hosting": {
+        "web-tfsp": [
+          "fspdev-dcd91"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fspdev-dcd91"
+  }
+}

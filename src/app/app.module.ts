@@ -7,6 +7,9 @@ import { NavbarLightComponent } from './shared/navbar-light/navbar-light.compone
 import { UserAreaComponent } from './components/user-area/user-area.component';
 
 import { CookieService } from 'ngx-cookie-service';
+import { ButtonFspComponent } from './components/button-fsp/button-fsp.component';
+import { ButtonLightFspComponent } from './components/button-light-fsp/button-light-fsp.component';
+import { CarrouselComponent } from './components/carrousel/carrousel.component';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import { CookieService } from 'ngx-cookie-service';
     AppComponent,
     NavbarComponent,
     NavbarLightComponent,
-    UserAreaComponent
+    UserAreaComponent,
+    ButtonFspComponent,
+    ButtonLightFspComponent,
+    CarrouselComponent
   ],
   imports: [
     BrowserModule

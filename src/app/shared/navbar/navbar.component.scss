@@ -1,23 +1,7 @@
-.navbar-fsp{
-    background-color: var(--color-fsp-light);
-    height: 6em;
-    display:grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    padding:  0 2em;
-    border-bottom: .2em solid var(--color-fsp);
-}
-
-.img-logo{
-    background: url(../../../assets/Images/fashions-park-logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 2em;
-    display:inline;
-}
-
-app-user-area {
-    flex-grow: 3;
+/* @use '../../../styles.scss' as *; */
+/* @use '../../../../node_modules/bootstrap/scss/bootstrap' as *; */
+.imagen-logo{
+    width: 80%;
 }
 
 .row-logo {
@@ -26,10 +10,13 @@ app-user-area {
     justify-content: space-between;
 }
 
-
 .header .top{
     background-color: var(--color-fsp-gray);
     height: 2em;
+}
+
+.header{
+    height:50%;
 }
 
 .logo-pequenio{
@@ -39,14 +26,11 @@ app-user-area {
     height: 1.3em;
     width: 1.3em;
     display:inline-block;
-
 }
 
 .header-top-text{
-    display: inline;
-   /*  margin-left: .5em; */
+    display: inline-block;
     margin-top:auto;
-    margin-bottom:auto;
     font-weight: 700;
     font-size: .7em;
 }
@@ -55,17 +39,33 @@ app-user-area {
     width: 4em;
 }
 
-.middle{
-    height: 5em;
-}
-
 .servicio-cliente-text{
     display: inline;
-    margin-left: 1em;
+    /* margin-left: 1em; */
+    margin-top: 1em;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .servicio-cliente-div{
     margin-top:1.2em;
+    margin-left:0;
+}
+
+.nav-link{
+    color: black;
+}
+
+.navbar-fsp{
+    font-size: .8em;
+}
+
+.group-buttons{
+    padding-right: 2em;
+}
+
+@media only screen and (max-width: 600px){
+    .btn-type-fsp{
+       /*  margin-top: 1em; */
+    }
 }

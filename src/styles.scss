@@ -1,8 +1,6 @@
 @use "sass:map";
-/* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/scss/functions";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import "../node_modules/bootstrap/scss/variables.scss";
 
 :root{
     --color-fsp: #aa0033;
@@ -14,40 +12,35 @@
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-
 
 // Merge the maps
 $color-fsp:       #aa0033;
 $custom-colors: (
   "color-fsp": $color-fsp
+  
 );
 
-$theme-colors: map-merge($theme-colors, $custom-colors);
-/* // Creación mapa de colores
-$colores-fsp: (
-  "color-fsp": #aa0033
-);
-// Mergear los mapas
-$theme-colors: map-merge($theme-colors, $colores-fsp);
 
-
-.navbar-fsp-dark{
-    height: 15em;
-    background-color:  map.get($colores-fsp, "color-fsp");
-    
-} */
 
 // Required
 @import "../node_modules/bootstrap/scss/variables";
-
 @import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
-
 @import "../node_modules/bootstrap-icons/";
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.row {
+	margin: 0 !important;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.btn-type-fsp + .btn-type-fsp {
+  margin-left: 1.5em;
+}

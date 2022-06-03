@@ -1,0 +1,15 @@
+$urlBackgroundGreen: "../../../assets/Images/full_screenlogin.jpeg";
+$urlImagenHal: "../../../assets/Images/image_login.png";
+
+
+.imagen-login{
+    height: 100vh;
+}
+
+#leftHalf {
+    background: url($urlImagenHal);
+    width: 48%;
+    position: absolute;
+    left: 0px;
+    height: 95%;
+ }

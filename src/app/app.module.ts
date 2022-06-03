@@ -10,7 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ButtonFspComponent } from './components/button-fsp/button-fsp.component';
 import { ButtonLightFspComponent } from './components/button-light-fsp/button-light-fsp.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
-
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
     CarrouselComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@ import { NavbarLightComponent } from '../shared/navbar-light/navbar-light.compon
 import { ButtonFspComponent } from './button-fsp/button-fsp.component';
 import { ButtonLightFspComponent } from './button-light-fsp/button-light-fsp.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,7 +17,8 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
     ButtonLightFspComponent,
     CarrouselComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,

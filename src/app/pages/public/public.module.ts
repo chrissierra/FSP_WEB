@@ -6,6 +6,7 @@ import { CarrouselComponent } from 'src/app/components/carrousel/carrousel.compo
 import { NavbarComponent } from 'src/app/shared/navbar/navbar.component';
 import { AppModule } from 'src/app/app.module';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,7 +17,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
   imports: [
     CommonModule,
     PublicRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule
   ]
 })
 export class PublicModule { }

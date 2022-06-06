@@ -13,6 +13,7 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PublicModule } from './pages/public/public.module';
 import { ComponentsModule } from './components/components.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ComponentsModule } from './components/components.module';
     BrowserModule,
     AppRoutingModule,
     PublicModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule
 
   ],
   exports:[

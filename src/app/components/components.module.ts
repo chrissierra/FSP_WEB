@@ -7,6 +7,7 @@ import { ButtonLightFspComponent } from './button-light-fsp/button-light-fsp.com
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { RouterModule } from '@angular/router';
 import { CardsFspComponent } from './cards-fsp/cards-fsp.component';
+import { BiggerCardComponent } from './bigger-card/bigger-card.component';
 
 
 
@@ -17,7 +18,8 @@ import { CardsFspComponent } from './cards-fsp/cards-fsp.component';
     ButtonFspComponent,
     ButtonLightFspComponent,
     CarrouselComponent,
-    CardsFspComponent],
+    CardsFspComponent,
+    BiggerCardComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -28,7 +30,8 @@ import { CardsFspComponent } from './cards-fsp/cards-fsp.component';
     ButtonFspComponent,
     ButtonLightFspComponent,
     CarrouselComponent,
-    CardsFspComponent
+    CardsFspComponent,
+    BiggerCardComponent
   ]
 })
 export class ComponentsModule { }

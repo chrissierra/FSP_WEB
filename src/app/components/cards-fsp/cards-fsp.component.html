@@ -1,9 +1,8 @@
 
     <div class="card card-fsp shadow p-3 mb-5 bg-body" >
-        <img src="../assets/Images/cardimage.png" class="card-img-top img-card-fsp" alt="...">
+        <img [src]="cardImage" class="card-img-top img-card-fsp" alt="...">
         <div class="card-body">
-        <h5 class="card-title fw-bold">Card title</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis consectetur vitae quas nisi aperiam, culpa aspernatur quaerat labore sequi facilis adipisci laborum optio pariatur impedit modi inventore repudiandae non?</p>
-        
+        <h5 class="card-title fw-bold">{{ cardTitle }}</h5>
+        <p class="card-text">{{cardBody}}</p>
         </div>
     </div>

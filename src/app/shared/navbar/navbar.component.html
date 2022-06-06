@@ -56,7 +56,6 @@
                     <app-button-fsp 
                     minWidthPropValue="12em"
                     class="btn-type-fsp d-flex align-items-center" 
-                    (eClick)="testing_button_event($event)" 
                     nombre="Solicita tu tarjeta"></app-button-fsp>
                 </div>
                 <div class="col-2 d-block d-md-none p-0">
@@ -88,6 +87,16 @@
 <div id="navbar" class="offcanvas offcanvas-start">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu</h5>
+
+        <app-button-light-fsp 
+        [useIcon]="useIconVar"
+        minWidthPropValue="12em"
+        class="btn-type-fsp" 
+        classIcon="bi bi-lock" 
+        (eClick)="eventoClick()" 
+        style="margin-right: -5em;"
+        nombre="Mi Cuenta"></app-button-light-fsp>
+
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
     <nav class="d-flex flex-column justify-content-around flex-wrap mb-2 navbar">

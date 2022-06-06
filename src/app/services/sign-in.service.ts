@@ -53,7 +53,7 @@ export class SignInService {
                 + response.status));
           }
 
-          console.log(response)
+          console.log("resppose en sign in service send token ", response)
 
           // Store the response in the session storage
           //this.sessionService.initAuthenticatedSession(response.data);

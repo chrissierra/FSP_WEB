@@ -6,6 +6,7 @@ import { ButtonFspComponent } from './button-fsp/button-fsp.component';
 import { ButtonLightFspComponent } from './button-light-fsp/button-light-fsp.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { RouterModule } from '@angular/router';
+import { CardsFspComponent } from './cards-fsp/cards-fsp.component';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     NavbarLightComponent,
     ButtonFspComponent,
     ButtonLightFspComponent,
-    CarrouselComponent],
+    CarrouselComponent,
+    CardsFspComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -25,7 +27,8 @@ import { RouterModule } from '@angular/router';
     NavbarLightComponent,
     ButtonFspComponent,
     ButtonLightFspComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    CardsFspComponent
   ]
 })
 export class ComponentsModule { }

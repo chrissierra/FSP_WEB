@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SessionService } from 'src/app/services/session.service';
 import { SignInService } from 'src/app/services/sign-in.service';
 
@@ -9,7 +10,7 @@ import { SignInService } from 'src/app/services/sign-in.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private signInService: SignInService, private sessionService: SessionService) { }
+  constructor(private signInService: SignInService, private sessionService: SessionService, private router: Router) { }
   response_wso2: any;
   ngOnInit(): void {
 
@@ -34,6 +35,7 @@ export class LoginComponent implements OnInit {
         console.log(this.sessionService.decodeIdToken(session.ID_TOKEN).exp > (new Date().getTime()/1000))
         console.log("ahora", (new Date().getTime()/1000))
         console.log("la hor d expiracion", this.sessionService.decodeIdToken(session.ID_TOKEN).exp)
+        this.router.navigate(['/user-area/index'])
         return;
     }
 

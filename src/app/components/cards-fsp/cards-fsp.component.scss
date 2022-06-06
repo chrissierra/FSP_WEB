@@ -3,6 +3,16 @@
     border: 0;
     max-width: 30em;
     border-radius: 16px;
+    transition: transform 0.7s;
+
+    
+    &:hover {
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1.03);
+		opacity: 1;
+	}
 }
 
 .img-card-fsp{

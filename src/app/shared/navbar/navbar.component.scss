@@ -12,7 +12,7 @@
 
 .header .top{
     background-color: var(--color-fsp-gray);
-    height: 2em;
+    height: 1.3em;
 }
 
 .header{
@@ -23,20 +23,21 @@
     background: url(../../../assets/Images/logo_pequeño_fsp.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 1.3em;
-    width: 1.3em;
+    height: 1em;
+    width: 1em;
     display:inline-block;
 }
 
 .header-top-text{
-    display: inline-block;
-    margin-top:auto;
+ /*    display: inline-block;
+    margin-top:auto; */
     font-weight: 700;
-    font-size: .7em;
+    font-size: .6em;
+    margin: 0;
 }
 
 .div-img{
-    width: 4em;
+    width: 3em;
 }
 
 .servicio-cliente-text{

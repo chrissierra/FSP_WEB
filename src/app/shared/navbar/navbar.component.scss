@@ -69,3 +69,13 @@
        /*  margin-top: 1em; */
     }
 }
+
+
+.items-navbar{
+    border-bottom: .2em solid white;
+    transition: 2s;
+    &:hover{
+        border-bottom: .2em solid red;
+
+    }
+}

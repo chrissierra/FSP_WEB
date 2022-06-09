@@ -1,0 +1,24 @@
+.card-account-statement{
+    background: #FFFFFF;
+    box-shadow: 0px 3.49714px 6.99429px 1.74857px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+   /*  width: 50%; */
+    height: 48%;
+    max-height: 48%;
+    margin-top:1em;
+   
+}
+.small-card{
+    background: #FFFFFF;
+box-shadow: 0px 1.74857px 3.49714px rgba(0, 0, 0, 0.25);
+border-radius: 5.24571px;
+height: 3.5em;
+width: 80%;
+margin: 1em auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+  }
+  

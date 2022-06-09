@@ -21,13 +21,13 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     
 
     if(!this.sessionService.isValidSession()){
-      return false;
+      return true; // return false;
     }
 
     if(!this.sessionService.isSessionExpired()){
       this.sessionService.resetAuthenticatedSession()
-      window.location.href = `${environment.LOGOUT_URL}?id_token_hint=${token}&post_logout_redirect_uri=${environment.REDIRECT_URI}`;
-      return false;
+      // window.location.href = `${environment.LOGOUT_URL}?id_token_hint=${token}&post_logout_redirect_uri=${environment.REDIRECT_URI}`;
+      return true; // return false;
     }else{
       return true;
     }
@@ -44,13 +44,13 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
       
   
       if(!this.sessionService.isValidSession()){
-        return false;
+        return true; // return false;
       }
   
       if(!this.sessionService.isSessionExpired()){
         this.sessionService.resetAuthenticatedSession()
-        window.location.href = `${environment.LOGOUT_URL}?id_token_hint=${token}&post_logout_redirect_uri=${environment.REDIRECT_URI}`;
-        return false;
+        // window.location.href = `${environment.LOGOUT_URL}?id_token_hint=${token}&post_logout_redirect_uri=${environment.REDIRECT_URI}`;
+        return true; // return false;
       }else{
         return true;
       }

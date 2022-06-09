@@ -1,0 +1,30 @@
+
+.header-fsp-ua{
+    border-bottom: .2em solid var(--color-fsp);
+    height: 6em;
+}
+
+
+.menu-user-area{
+    height: calc(100vh - 6em);
+    background-color: var(--color-fsp-gray);
+}
+
+.imagen-logo{
+    width: 20em;
+    margin-left:1em;
+}
+
+.logo-pequenio{
+    width: 32px;
+}
+
+.item-listado-menufsp{
+    border: 0;background-color:  var(--color-fsp-gray);
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+.bi{
+    margin-right: .4em;
+}

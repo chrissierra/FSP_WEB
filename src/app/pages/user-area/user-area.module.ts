@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index/index.component';
 import { UserAreaRoutingModule } from './user-area-routing.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 
@@ -9,7 +10,8 @@ import { UserAreaRoutingModule } from './user-area-routing.module';
   declarations: [IndexComponent],
   imports: [
     CommonModule,
-    UserAreaRoutingModule
+    UserAreaRoutingModule,
+    ComponentsModule
   ]
 })
 export class UserAreaModule { }

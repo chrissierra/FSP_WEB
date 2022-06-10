@@ -10,6 +10,8 @@ export class ButtonFspComponent  {
   @Input() minWidthPropValue: any = 'auto';
   @Input() useIcon: boolean = false;
   @Input() classIcon: string = '';
+  @Input() borderRadiusPropValue: string = ''
+  @Input() fontSizeProp: string = ''
   @Output() eClick = new EventEmitter<any>();
 
   constructor() { }

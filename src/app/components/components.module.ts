@@ -11,6 +11,8 @@ import { BiggerCardComponent } from './bigger-card/bigger-card.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { OutstandingBalanceComponent } from './outstanding-balance/outstanding-balance.component';
 import { CardImageUaComponent } from './card-image-ua/card-image-ua.component';
+import { HeaderUaComponent } from './header-ua/header-ua.component';
+import { NavbarUaComponent } from './navbar-ua/navbar-ua.component';
 
 
 
@@ -25,7 +27,9 @@ import { CardImageUaComponent } from './card-image-ua/card-image-ua.component';
     BiggerCardComponent,
     AccountStatementComponent,
     OutstandingBalanceComponent,
-    CardImageUaComponent],
+    CardImageUaComponent,
+    HeaderUaComponent,
+    NavbarUaComponent],
   imports: [
     CommonModule,
     RouterModule
@@ -40,7 +44,9 @@ import { CardImageUaComponent } from './card-image-ua/card-image-ua.component';
     BiggerCardComponent,
     AccountStatementComponent,
     OutstandingBalanceComponent,
-    CardImageUaComponent
+    CardImageUaComponent,
+    HeaderUaComponent,
+    NavbarUaComponent
   ]
 })
 export class ComponentsModule { }

@@ -4,6 +4,7 @@ import { IndexComponent } from './index/index.component';
 import { RouterModule } from '@angular/router';
 import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EstadosDeCuentaComponent } from './estados-de-cuenta/estados-de-cuenta.component';
 const routes = [
   {
     path: '', 
@@ -18,8 +19,12 @@ const routes = [
         component: MiPerfilComponent
       },
       {
+        path: 'EstadosDeCuenta',
+        component: EstadosDeCuentaComponent
+      },
+      {
         path: '**',
-        component: IndexComponent
+        component: InicioComponent
       }
     ]
   }

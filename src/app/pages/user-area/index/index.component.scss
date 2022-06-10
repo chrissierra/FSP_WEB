@@ -1,23 +1,21 @@
-
+/* 
 .header-fsp-ua{
     border-bottom: .2em solid var(--color-fsp);
     height: 6em;
 }
 
-
-.menu-user-area{
-    height: calc(100vh - 6em);
-    background-color: var(--color-fsp-gray);
+.logo-pequenio{
+    width: 32px;
 }
+
+
 
 .imagen-logo{
     width: 20em;
     margin-left:1em;
 }
 
-.logo-pequenio{
-    width: 32px;
-}
+
 
 .item-listado-menufsp{
     border: 0;background-color:  var(--color-fsp-gray);
@@ -28,4 +26,9 @@
 
 .bi{
     margin-right: .4em;
+} */
+
+.menu-user-area{
+    min-height: calc(100vh - 6em);
+    background-color: var(--color-fsp-gray);
 }

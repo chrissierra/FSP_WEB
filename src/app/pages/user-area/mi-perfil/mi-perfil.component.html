@@ -1,1 +1,188 @@
-<p>mi-perfil works!</p>
+
+<div class="row">
+    <div class="col-12 p-2 mb-2" >
+        <img src="../../../../assets/Images/banner-horizontal_1.jpg" class="img-fluid" alt="..." >
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mb-4">
+        <h4>Mi Perfil</h4>
+
+    </div>
+</div>
+
+<div class="row " style="border-bottom: .3em solid var(--color-fsp-gray);">
+    
+
+    <div [ngClass]="classDatosPersonales" class="col-2" style="margin-bottom: -4px;padding: 1em;">
+        <h6  (click)="navigateToDatosPersonales()" class="fw-bolder" style="margin: 0;">Datos Personales</h6>
+    </div>
+
+    <div  [ngClass]="classCambiarClave"  class="col-2" style="margin-bottom: -4px;padding: 1em;">
+        <h6 (click)="navigateToCambiarClave()" class="fw-bolder" style="margin: 0;">Cambiar Clave</h6>
+    </div>
+
+    
+
+</div>
+
+
+<div class="container-fluid" *ngIf="!screenActiveClave">
+
+
+    <div class="row" style="padding-top:3em">
+
+        <!-- <div class="col-3" > -->
+            <!-- Imagen -->
+            <img src="../../../../assets/Images/MEDALLA ORO.png"  class="logo-pequenio img-fluid float-start" alt="...">
+        <!-- </div> -->
+
+    <!--  <div class="col-9 mb-2"></div> -->
+
+        <div class="col-6">
+            <!-- Nombre, RUT FECHA NAC -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-4">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <h6>Recibir estado de cuenta por:</h6>
+
+                </div>
+            </div>
+            <!-- Recibir estado de cuenta por -->
+            <div class="row ">
+                <div class="col-12 mb-4 ">
+
+                    <div class="card-form-switch-fsp">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">EMAIL</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-12 mb-4 ">
+
+                    <div class="card-form-switch-fsp">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">SMS</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row " style="padding-top:3em">
+        <div class="col-12 mb-4">
+            <h5 class="text-muted">Información de contacto</h5>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Comuna</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Número</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+
+        
+
+    </div>
+
+
+
+    <div class="row " style="padding-top:2em">
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Dpto / Villa / Población</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="col-3">
+    <!--         <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div> -->
+        </div>
+
+        
+
+    </div>
+
+
+    <div class="row"  style="padding-top:4em">
+        <div class="col-12" style="margin-bottom:6em">
+            <app-button-fsp 
+            minWidthPropValue="25em"
+            borderRadiusPropValue="4em"
+            fontSizeProp="1em"
+            class="d-flex align-items-center justify-content-center" 
+            nombre="Guardar Cambios"></app-button-fsp>
+        </div>
+    </div>
+</div>
+
+<app-cambiar-clave *ngIf="screenActiveClave"></app-cambiar-clave>

@@ -7,12 +7,14 @@ import { NavbarComponent } from 'src/app/shared/navbar/navbar.component';
 import { AppModule } from 'src/app/app.module';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { RouterModule } from '@angular/router';
+import { ProspectosComponent } from './prospectos/prospectos.component';
 
 
 
 @NgModule({
   declarations: [
-    IndexComponent
+    IndexComponent,
+    ProspectosComponent
   ],
   imports: [
     CommonModule,

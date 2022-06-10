@@ -1,7 +1,7 @@
 
 
 <div>
-    <div class="row d-flex justify-content-between header-fsp-ua">
+<!--     <div class="row d-flex justify-content-between header-fsp-ua">
 
         <div class="col-3 d-flex align-items-center ">
             <img src="../../../assets/Images/fashions-park-logo.png" class="imagen-logo img-fluid" alt="...">
@@ -27,39 +27,47 @@
         </div>
 
 
-    </div>
+    </div> -->
+    <app-header-ua></app-header-ua>
 
     <div class="row">
-        <div class="col-2 menu-user-area">
-            <div class="row d-flex flex-column " style="height:100%">
-                <div class="col-12 d-flex align-items-center justify-content-center mb-4" style="margin-top:2em">
-                    <img src="../../../../assets/Images/MEDALLA ORO.png"  class="logo-pequenio img-fluid" alt="...">
-                    <h6 style="font-weight:700;margin-left: 1em;">HOLA CHRISTOPHER!</h6>
-                </div>
 
-                <div class="col-12">
-                    <ul class="list-group" >
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-house"></i> Inicio </li>
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-credit-card"></i> Pagar mi cuenta </li>
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-newspaper"></i> Movimientos </li>
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-file-earmark"></i> Avance y super avace </li>
-                        <li class="list-group-item item-listado-menufsp" [routerLink]="['../MiPerfil']"><i class="bi bi-credit-card-2-front"></i> Mi perfil </li>
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Mis documentos </li>
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Beneficios </li>
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Contáctanos </li>
-                        <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Tiendas </li>
-                      </ul>
-                </div>
+<!--         <div class="col-2 menu-user-area">
+                <div class="row d-flex flex-column " style="height:100%">
+                    <div class="col-12 d-flex align-items-center justify-content-center mb-4" style="margin-top:2em">
+                        <img src="../../../../assets/Images/MEDALLA ORO.png"  class="logo-pequenio img-fluid" alt="...">
+                        <h6 style="font-weight:700;margin-left: 1em;">HOLA CHRISTOPHER!</h6>
+                    </div>
 
-                <div class="col-12 d-flex justify-content-center align-items-end" style="margin-top: 2em;">
-                    <img src="./../../../../assets/Images/logo2.png" class="img-fluid" alt="..." width="100px">
+                    <div class="col-12">
+                        <ul class="list-group" >
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-house"></i> Inicio </li>
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-credit-card"></i> Pagar mi cuenta </li>
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-newspaper"></i> Movimientos </li>
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-file-earmark"></i> Avance y super avace </li>
+                            <li class="list-group-item item-listado-menufsp" [routerLink]="['../MiPerfil']"><i class="bi bi-credit-card-2-front"></i> Mi perfil </li>
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Mis documentos </li>
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Beneficios </li>
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Contáctanos </li>
+                            <li class="list-group-item item-listado-menufsp"><i class="bi bi-reception-4"></i> Tiendas </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-center align-items-end" style="margin-top: 2em;">
+                        <img src="./../../../../assets/Images/logo2.png" class="img-fluid" alt="..." width="100px">
+                    </div>
                 </div>
+        </div> -->
+            <div class="col-2 menu-user-area">
+                <app-navbar-ua></app-navbar-ua>
             </div>
-        </div>
 
-        <div>
-        <router-outlet></router-outlet>
-    </div>
+
+            <div class="col-9" style="padding-left:4em">
+                <router-outlet></router-outlet>
+            </div>  
+
+ 
 <!--         <div class="col-5" style="max-height:calc(100vh - 6em);">
 
             

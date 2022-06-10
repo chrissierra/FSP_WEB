@@ -2,13 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index/index.component';
 import { RouterModule } from '@angular/router';
+import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
+import { InicioComponent } from './inicio/inicio.component';
 const routes = [
   {
     path: '', 
+    component: IndexComponent,
     children:[
       {
         path: 'index',
-        component: IndexComponent
+        component: InicioComponent
+      },
+      {
+        path: 'MiPerfil',
+        component: MiPerfilComponent
       },
       {
         path: '**',

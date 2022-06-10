@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index/index.component';
 import { UserAreaRoutingModule } from './user-area-routing.module';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { MiPerfilComponent } from './mi-perfil/mi-perfil.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
 @NgModule({
-  declarations: [IndexComponent],
+  declarations: [IndexComponent, MiPerfilComponent, InicioComponent],
   imports: [
     CommonModule,
     UserAreaRoutingModule,

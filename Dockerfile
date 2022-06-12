@@ -9,4 +9,4 @@ RUN run npm prod
 
 FROM nginx:1.19
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/dist/web-tfsp
+COPY --from=build /app/dist/web-tfsp /usr/share/nginx/html

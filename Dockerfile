@@ -2,7 +2,7 @@ FROM node:16.10 as build
 WORKDIR /app
 
 #COPY package.json /app/package.json
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run prod

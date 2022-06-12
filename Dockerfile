@@ -8,5 +8,7 @@ COPY . .
 RUN npm run prod
 
 FROM nginx:1.19
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+VOLUME /var/cache/nginx
 COPY --from=build /app/dist/web-tfsp /usr/share/nginx/html
+#COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf

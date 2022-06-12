@@ -5,7 +5,7 @@ RUN apk update && apk add --no-cache make git
 WORKDIR /app
 # Create app/nginx directory and copy default.conf to it
 WORKDIR /app/nginx
-COPY nginx/conf.d/default.conf /app/nginx/
+COPY nginx/default.conf /app/nginx/
 # Install app dependencies
 COPY package.json package-lock.json /app/
 RUN cd /app && npm set progress=false && npm install

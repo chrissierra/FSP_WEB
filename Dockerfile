@@ -8,5 +8,5 @@ RUN npm run prod
 
 FROM nginx:alpine
 VOLUME /var/cache/nginx
-COPY --from=angular app/dist /usr/share/nginx/html
+COPY --from=angular app/dist/web-tfsp /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf

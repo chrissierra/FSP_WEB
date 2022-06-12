@@ -11,5 +11,5 @@ FROM nginx:1.19
 
 #VOLUME /var/cache/nginx
 #COPY --from=angular app/dist /usr/share/nginx/html
-COPY ./nginx/default.conf /etc/nginx/nginx.conf
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist/web-tfsp/ /usr/share/nginx/html

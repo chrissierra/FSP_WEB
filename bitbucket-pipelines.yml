@@ -21,7 +21,7 @@ pipelines:
       - step:
           name: Build
           script:
-            - npm run build:production
+            - npm run prod
           artifacts:
             - dist/** # Save build for next steps
       - step:

@@ -1,0 +1,37 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+image: atlassian/default-image:3
+
+
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Installation
+          caches:
+            - node
+          script:
+            - npm install
+          artifacts:
+            - node_modules/** # Save modules for next steps
+      - step:
+          name: Lint
+          script:
+            - npm run lint
+      - step:
+          name: Build
+          script:
+            - npm run build:production
+          artifacts:
+            - dist/** # Save build for next steps
+      - step:
+          name: Deploy
+          script:
+            - pipe: atlassian/google-app-engine-deploy:0.2.1
+              variables:
+                KEY_FILE: $KEY_FILE
+                PROJECT: 'fsp-web'

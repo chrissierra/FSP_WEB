@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index/index.component';
 import { RouterModule } from '@angular/router';
+import { ProspectosComponent } from './prospectos/prospectos.component';
 const routes = [
   {
     path: '', 
@@ -9,6 +10,10 @@ const routes = [
       {
         path: 'index',
         component: IndexComponent
+      },
+      {
+        path: 'Prospects',
+        component: ProspectosComponent
       },
       {
         path: '**',

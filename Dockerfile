@@ -14,6 +14,8 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=0 /app/dist/web-tfsp /usr/share/nginx/html
 
+
+CMD ["/bin/sh",  "-c",  "exec nginx -g 'daemon off;'"]
 #FROM nginx:1.19
 #VOLUME /var/cache/nginx
 #COPY --from=build /app/dist/web-tfsp /usr/share/nginx/html

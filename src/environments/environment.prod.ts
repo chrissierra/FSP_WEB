@@ -10,6 +10,5 @@ export const environment = {
   GRANT_TYPE: "authorization_code",
   CLIENT_URL: "https://localhost:4200/",
   LOGOUT_URL: "https://localhost:9443/oidc/logout",
-  COOKIE_PATH: "/",
-  webapiurl: (window as any)["envconfig"]["apiurl"] || "default" 
+  COOKIE_PATH: "/"
 };

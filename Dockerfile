@@ -10,6 +10,8 @@ RUN npm run prod
 
 FROM nginx
 EXPOSE 80
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+RUN rm -rf /usr/share/nginx/html/*
 COPY --from=0 /app/dist/web-tfsp /usr/share/nginx/html
 
 #FROM nginx:1.19

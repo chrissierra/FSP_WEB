@@ -1,6 +1,10 @@
-script:
-  - pipe: atlassian/google-app-engine-deploy:0.4.1
-    variables:
-      KEY_FILE: $KEY_FILE
-      PROJECT: 'fsp-web'
-      DEPLOYABLES: 'app.yaml'
+pipelines:
+   branches:
+     master:
+     - step:
+          script:
+          - pipe: atlassian/google-app-engine-deploy:0.4.1
+            variables:
+              KEY_FILE: $KEY_FILE
+              PROJECT: 'fsp-web'
+              DEPLOYABLES: 'app.yaml'

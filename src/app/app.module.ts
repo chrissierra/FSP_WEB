@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PublicModule } from './pages/public/public.module';
 import { ComponentsModule } from './components/components.module';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[
     NavbarComponent,
+    FooterComponent,
     CarrouselComponent
   ],
   providers: [CookieService],

@@ -13,12 +13,14 @@ import { OutstandingBalanceComponent } from './outstanding-balance/outstanding-b
 import { CardImageUaComponent } from './card-image-ua/card-image-ua.component';
 import { HeaderUaComponent } from './header-ua/header-ua.component';
 import { NavbarUaComponent } from './navbar-ua/navbar-ua.component';
+import { FooterComponent } from '../shared/footer/footer.component';
 
 
 
 @NgModule({
   declarations: [    
     NavbarComponent,
+    FooterComponent,
     NavbarLightComponent,
     ButtonFspComponent,
     ButtonLightFspComponent,
@@ -36,6 +38,7 @@ import { NavbarUaComponent } from './navbar-ua/navbar-ua.component';
   ],
   exports: [
     NavbarComponent,
+    FooterComponent,
     NavbarLightComponent,
     ButtonFspComponent,
     ButtonLightFspComponent,

@@ -36,4 +36,4 @@ pipelines:
             variables:
               KEY_FILE: $KEY_FILE
               PROJECT: 'fsp-web'
-              DEPLOYABLES: 'app.yaml
+              DEPLOYABLES: 'app.yaml'

@@ -3,7 +3,7 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-  - url: /(.*\.(gif|png|jpg|css|js)(|\.map))$
+  - url: /(.*\.(gif|png|jpg|css|js|woff|woff2)(|\.map))$
     static_files: dist/web-tfsp/\1
     upload: dist/web-tfsp/(.*)(|\.map)
 

@@ -1,6 +1,119 @@
-<h4 class="text-center">Prospectos</h4>
 
 
-<div class="container">
-    
+<div class="contenedor">
+
+
+    <div class="row" style="padding:2em">
+
+        <div class="col-12 text-center">
+                <small class="volver-button" style="float:left;margin-right: -3.5em;" [routerLink]="['../']">VOLVER</small>
+                <img src="../../../assets/Images/fashions-park-logo.png" [routerLink]="['./']" class="imagen-logo img-fluid" alt="...">
+        </div>
+    </div>
+
+
+    <div class="row ">
+        <div class="col-12 text-center mb-1">
+            <h6 class="fw-bolder">INGRESA TUS DATOS</h6>
+        </div>
+    </div>
+   
+
+<!--     <div class="row mb-4">
+        <div class="col-12 text-center mb-2">
+            <h6 class="fw-bolder text-muted">Ingresa tus datos, sólo te tomará unos minutos</h6>
+        </div>
+    </div> -->
+
+
+    <div class="row">
+        <div class="col-12 col-sm-6 text-center mb-2" style="margin:auto">
+            <div class="mb-3">
+               
+                <input type="password" class="form-control input-fsp" id="exampleFormControlInput1" placeholder="Ingresa tu rut">
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-6 text-center mb-2" style="margin:auto">
+            <div class="mb-3">
+               
+                <input type="password" class="form-control input-fsp" id="exampleFormControlInput1" placeholder="Ingresa tu nombre y apellido">
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-6 text-center mb-2" style="margin:auto">
+            <div class="mb-3">
+               
+                <input type="password" class="form-control input-fsp" id="exampleFormControlInput1" placeholder="Ingresa tu email">
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-6 text-center mb-2" style="margin:auto">
+            <div class="mb-3">
+               
+                <input type="password" class="form-control input-fsp" id="exampleFormControlInput1" placeholder="Ingresa tu número">
+              </div>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-6 col-sm-3 text-center mb-4 d-flex align-items-center" >
+                <h6 style="margin-bottom:0">Fecha de nacimiento</h6>
+
+        </div>
+        <div class="col-6 col-sm-3  text-center mb-4 d-flex align-items-center" >
+           
+               
+                <input type="date" class="form-control input-fsp" id="exampleFormControlInput1">
+              
+        </div>
+    </div>
+
+    <div class="d-block d-sm-none" style="margin-bottom:3em"></div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 mb-3 d-flex justify-content-center">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  He leído y acepto los acuerdos generales
+                </label>
+              </div>
+        </div>
+
+
+<!--     </div>
+
+
+    <div class="row justify-content-center"> -->
+        <div class="col-12 col-sm-6 d-flex justify-content-center">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    He leído y acepto los acuerdos digitales
+                </label>
+              </div>
+        </div>
+    </div>
+
+    <div class="d-block d-sm-none" style="margin-bottom:2em"></div>
+
+    <div class="row">
+        <app-button-fsp 
+        minWidthPropValue="25em"
+        class="btn-type-fsp d-flex align-items-center justify-content-center" 
+        borderRadiusPropValue="2em"
+        nombre="Solicita tu tarjeta"
+        style="margin-bottom:1em"></app-button-fsp>
+
+        <small class="text-center advertencia-submit">Al presionar continuar estás de acuerdo con nuestros términos y condiciones de evaluación crediticia y utiliazación de datos</small>
+    </div>
+
 </div>

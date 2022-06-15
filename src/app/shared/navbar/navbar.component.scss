@@ -71,12 +71,43 @@
     }
 }
 
+.items-navbar{
+    position:relative
+}
+
+.desplegable-header{
+    width: 10em;
+    height: 0;
+    background-color: white;
+    border: .1em solid white; 
+    position: absolute;
+    top: 3em;
+    left:-2em;
+    z-index: 1;
+    border-radius: .5em;
+    transition: height 0.25s ease-in;
+}
+
+.bigger-desplegable{
+    width: 15em;
+    left:-3em;
+}
 
 .items-navbar{
     border-bottom: .2em solid white;
-    transition: 2s;
+    transition: 0.25s;
     &:hover{
         border-bottom: .2em solid red;
 
     }
+
+
+
+
+}
+
+.items-navbar:hover > .desplegable-header {
+
+    height:10em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }

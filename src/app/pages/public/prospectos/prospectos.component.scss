@@ -1,0 +1,28 @@
+.contenedor{
+    background: #FFFFFF;
+box-shadow: 0px 4px 16px #717171;
+border-radius: 64px;
+width: 80vw;
+height: 95vh;
+margin: 1em auto;
+}
+
+
+.imagen-logo{
+
+    width: 20em;
+    margin-left:1em;
+    cursor:pointer;
+}
+
+.volver-button{
+    cursor:pointer;
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
+.advertencia-submit{
+    font-size: .8em;
+    padding: 0 5em;
+}

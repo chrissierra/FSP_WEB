@@ -14,6 +14,8 @@ export class MiPerfilComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
   navigateToCambiarClave(): void {
     this.screenActiveClave = true;
     this.classCambiarClave = 'pestaniaActiva'

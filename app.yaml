@@ -1,4 +1,5 @@
 runtime: python27
+# https://support.atlassian.com/bitbucket-cloud/docs/deploy-to-google-cloud/
 api_version: 1
 threadsafe: yes
 

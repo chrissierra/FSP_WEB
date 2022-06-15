@@ -15,7 +15,7 @@ export const environment = {
   CLIENT_URL: "https://localhost:4200/",
   LOGOUT_URL: "https://localhost:9443/oidc/logout",
   COOKIE_PATH: "/",
-  apiUrl: ""
+  API_URL: ""
 };
 
 

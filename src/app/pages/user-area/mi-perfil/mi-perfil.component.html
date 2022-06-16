@@ -13,7 +13,7 @@
 </div>
 
 <div class="row " style="border-bottom: .3em solid var(--color-fsp-gray);">
-    
+
 
     <div [ngClass]="classDatosPersonales"  class="col-3 d-flex justify-content-center"  style="margin-bottom: -4px;padding: 1em;">
         <h6  (click)="navigateToDatosPersonales()" class="fw-bolder" style="margin: 0;">Datos Personales</h6>
@@ -25,12 +25,16 @@
         <h6 (click)="navigateToCambiarClave()" class="fw-bolder" style="margin: 0;">Cambiar Clave</h6>
     </div>
 
-    
+
 
 </div>
 
 
 <div class="container-fluid" *ngIf="!screenActiveClave">
+
+
+  <form [formGroup]="formCustomer">
+
 
 
     <div class="row" style="padding-top:3em">
@@ -42,13 +46,13 @@
 
     <!--  <div class="col-9 mb-2"></div> -->
 
-        <div class="col-5">
+        <div class="col-5" >
             <!-- Nombre, RUT FECHA NAC -->
             <div class="row">
                 <div class="col-12">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nombre Completo</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                        <label for="inputName" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" formControlName="name" id="inputName" placeholder="Nombre">
                     </div>
                 </div>
 
@@ -57,14 +61,14 @@
             <div class="row">
                 <div class="col-6">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">RUT</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="RUT">
+                        <label for="inputRut" class="form-label">RUT</label>
+                        <input type="text" class="form-control" formControlName="rut" id="inputRut" placeholder="RUT">
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Apellido</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+                        <label for="inputFNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" formControlName="birth_date" id="inputFNacimiento" placeholder="Fecha de Nacimiento">
                     </div>
                 </div>
             </div>
@@ -113,56 +117,63 @@
         <div class="col-12 mb-4">
             <h5 class="text-muted">Información de contacto</h5>
         </div>
-        <div class="col-3">
+        <div class="col-4">
             <div class="mb-3">
                 <label for="correo" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="correo" placeholder="Correo">
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="comuna" class="form-label">Comuna</label>
-                <input type="text" class="form-control" id="comuna" placeholder="Comuna">
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="ciudad" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="numero" class="form-label">Número</label>
-                <input type="number" class="form-control" id="numero" placeholder="2134">
+                <input type="email" class="form-control" formControlName="mail" id="correo" placeholder="Correo">
             </div>
         </div>
 
-        
+        <div class="col-2">
+          <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" formControlName="phone" id="telefono" placeholder="+56 9 4475 1234">
+          </div>
+      </div>
+
+
+
+
 
     </div>
 
 
 
     <div class="row " style="padding-top:2em">
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="telefono" placeholder="+56 9 4475 1234">
-            </div>
+      <div class="col-6">
+        <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" formControlName="address" id="direccion" placeholder="Calle uno">
         </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="direccion" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccion" placeholder="Calle uno">
-            </div>
+      </div>
+
+      <div class="col-3">
+          <div class="mb-3">
+              <label for="ciudad" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" formControlName="city" id="ciudad" placeholder="Ciudad">
+          </div>
+      </div>
+
+      <div class="col-3">
+        <div class="mb-3">
+            <label for="comuna" class="form-label">Comuna</label>
+            <input type="text" class="form-control"  id="comuna" placeholder="Comuna">
         </div>
-        <div class="col-3">
+      </div>
+
+
+        <!-- <div class="col-3">
+          <div class="mb-3">
+              <label for="numero" class="form-label">Número</label>
+              <input type="number" class="form-control"  id="numero" placeholder="">
+          </div>
+      </div> -->
+        <!-- <div class="col-3">
             <div class="mb-3">
                 <label for="dpto" class="form-label">Dpto / Villa / Población</label>
-                <input type="text" class="form-control" id="dpto" placeholder="Nombre Villa">
+                <input type="text" class="form-control"  id="dpto" placeholder="Nombre Villa">
             </div>
-        </div>
+        </div> -->
         <div class="col-3">
     <!--         <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -170,21 +181,24 @@
             </div> -->
         </div>
 
-        
+
 
     </div>
+
+  </form>
 
 
     <div class="row"  style="padding-top:4em">
         <div class="col-12" style="margin-bottom:6em">
-            <app-button-fsp 
+            <app-button-fsp
             minWidthPropValue="24em"
             borderRadiusPropValue="4em"
             fontSizeProp="1em"
-            class="d-flex align-items-center justify-content-center" 
+            class="d-flex align-items-center justify-content-center"
             nombre="Guardar Cambios"></app-button-fsp>
         </div>
     </div>
+
 </div>
 
 <app-cambiar-clave *ngIf="screenActiveClave"></app-cambiar-clave>

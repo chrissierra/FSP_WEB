@@ -1,17 +1,17 @@
 export interface Customers {
-    rut:                   string;
-    dv:                    string;
-    name:                  string;
-    address:               string;
-    county:                string;
-    city:                  string;
-    phone:                 string;
-    mail:                  string;
-    birth_date:            string;
-    age:                   string;
-    card_type:             string;
-    card_type_message:     string;
-    account_state:         string;
-    account_state_message: string;
-    delay_step:            string;
+  account_state:         string;
+  account_state_message: string;
+  age:                   string;
+  address:               string;
+  birth_date:            string;
+  card_type:             string;
+  card_type_message:     string;
+  city:                  string;
+  county:                string;
+  delay_step:            string;
+  dv:                    string;
+  mail:                  string;
+  name:                  string;
+  phone:                 string;
+  rut:                   string;
 }

@@ -8,4 +8,4 @@ export interface AccountStatement {
     total_amount_invoiced:   string;
     maximum_date_pay:        string;
 }
-// Estados de cuenta 
+// Estados de cuenta

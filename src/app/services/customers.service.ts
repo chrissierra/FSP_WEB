@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
 import { Customers } from './../interfaces/customers.interface';
-import { catchError, throwError, Observable } from 'rxjs';
+import { AccountStatement } from './../interfaces/account-statement.interface';
+import { catchError, throwError, Observable, pluck } from 'rxjs';
+import { Item } from '../interfaces/periods.interface';
 
 
 @Injectable({
@@ -53,18 +55,21 @@ export class CustomersService {
   getAccountStatement(rut: string, dv: string): Observable<any> {
     let headers = new HttpHeaders;
     headers = headers.set('apikey', this.API_KEY);
-    return this.http.get<Customers>(`${this.API_URL}/${rut}${dv}${this.currentAcc}`, {
+    return this.http.get<AccountStatement>(`${this.API_URL}/${rut}${dv}${this.currentAcc}`, {
       headers
     });
   }
 
   //-- Periodos disponibles de estados de cuentas
-  getAccountStatementPeriods(rut: string, dv: string): Observable<any> {
+  getAccountStatementPeriods(rut: string, dv: string) {
     let headers = new HttpHeaders;
     headers = headers.set('apikey', this.API_KEY);
-    return this.http.get<any>(`${this.API_URL}/${rut}-${dv}/account-statements/periods`, {
+    return this.http.get<Item[]>(`${this.API_URL}/${rut}-${dv}/account-statements/periods`, {
       headers
-    });
+    })
+    .pipe(
+      pluck('items')
+    );
   }
 }
 

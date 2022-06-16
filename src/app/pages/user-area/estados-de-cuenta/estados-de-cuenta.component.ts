@@ -11,5 +11,4 @@ export class EstadosDeCuentaComponent implements OnInit {
   public useIcon: boolean = true;
   ngOnInit(): void {
   }
-
 }

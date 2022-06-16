@@ -110,6 +110,7 @@ a  {
     border-bottom: .15em solid transparent;
     padding-bottom: .8em;
     margin-bottom: -1em;
+    cursor:pointer;
     font-weight: 700;
     &:hover{
         border-bottom: .15em solid var(--color-fsp);
@@ -145,6 +146,12 @@ a  {
     display:block;
    /*  transform: translate(0); */
     transform: scaleY(1);
+}
+
+.item-listado-fsp{
+    font-size: .7em;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .item-listado-fsp:hover{

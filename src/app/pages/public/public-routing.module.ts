@@ -4,17 +4,58 @@ import { IndexComponent } from './index/index.component';
 import { RouterModule } from '@angular/router';
 import { ProspectosComponent } from './prospectos/prospectos.component';
 import { AvanceComponent } from './avance/avance.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { SuperAvanceComponent } from './super-avance/super-avance.component';
+import { EducacionFinancieraComponent } from './educacion-financiera/educacion-financiera.component';
+import { LugaresDePagoComponent } from './lugares-de-pago/lugares-de-pago.component';
+import { BeneficiosComponent } from './beneficios/beneficios.component';
+import { CaracteristicasTarjetaComponent } from './caracteristicas-tarjeta/caracteristicas-tarjeta.component';
+import { SegurosComponent } from './seguros/seguros.component';
+import { MuerteAccidentalComponent } from './muerte-accidental/muerte-accidental.component';
 const routes = [
   {
     path: '', 
+    component: IndexComponent,
     children:[
       {
         path: 'index',
-        component: IndexComponent
+        component: InicioComponent
       },
       {
         path: 'avance',
         component: AvanceComponent
+      },
+      {
+        path: 'super-avance',
+        component: SuperAvanceComponent
+      },
+      {
+        path: 'educacion-financiera',
+        component: EducacionFinancieraComponent
+      },
+      {
+        path: 'lugares-pago',
+        component: LugaresDePagoComponent
+      },
+      {
+        path: 'beneficios',
+        component: BeneficiosComponent
+      },
+      {
+        path: 'caracteristicas-tarjeta',
+        component: CaracteristicasTarjetaComponent
+      },
+      {
+        path: 'avance',
+        component: AvanceComponent
+      },
+      {
+        path: 'seguros',
+        component: SegurosComponent
+      },
+      {
+        path: 'muerte-accidental',
+        component: MuerteAccidentalComponent
       },
       {
         path: 'Prospects',
@@ -22,7 +63,7 @@ const routes = [
       },
       {
         path: '**',
-        component: IndexComponent
+        component: InicioComponent
       }
     ]
   }

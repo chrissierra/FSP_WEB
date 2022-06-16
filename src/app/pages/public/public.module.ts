@@ -17,6 +17,7 @@ import { BeneficiosComponent } from './beneficios/beneficios.component';
 import { LugaresDePagoComponent } from './lugares-de-pago/lugares-de-pago.component';
 import { EducacionFinancieraComponent } from './educacion-financiera/educacion-financiera.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { SegurosComponent } from './seguros/seguros.component';
 
 
 
@@ -32,7 +33,8 @@ import { InicioComponent } from './inicio/inicio.component';
     BeneficiosComponent,
     LugaresDePagoComponent,
     EducacionFinancieraComponent,
-    InicioComponent
+    InicioComponent,
+    SegurosComponent
   ],
   imports: [
     CommonModule,

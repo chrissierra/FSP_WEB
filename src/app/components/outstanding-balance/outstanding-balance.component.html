@@ -3,10 +3,16 @@
         <div class="row ">
             <div class="col-12 text-center mb-4">
                 <h5 class="fw-bolder">Cupo total</h5>
-                <h3 class="fw-bolder">2.000.000</h3>
+                <h3 class="fw-bolder">{{ accountObject.total_amount_authorized | currency:'$':'symbol':'1.0-1':'es-CL' }} </h3>
                 <div class="d-flex justify-content-center">
                     <div class="progress" style="height: .7em;width: 80%;">
-                        <div class="progress-bar" role="progressbar" style="width: 35%; background-color: var(--color-fsp);" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" 
+                        role="progressbar" 
+                        style="width: 35%; background-color: var(--color-fsp);" 
+                        [style.width]="percentProgressBar()+'%'"
+                        [attr.aria-valuenow]="percentProgressBar()" 
+                        aria-valuemin="0" 
+                        aria-valuemax="100"></div>
                     </div>
 
                 </div>
@@ -19,7 +25,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-3 mb-4" >
                 <h6 class="fw-bolder">Utilizado</h6>
-                <h5 class="fw-bolder" style="color: var(--color-fsp)">$730.000</h5>
+                <h5 class="fw-bolder" style="color: var(--color-fsp)"><!-- $730.000 --> {{ accountObject.total_amount_used | currency:'$':'symbol':'1.0-1':'es-CL'}}  </h5>
                 
             </div>
 
@@ -30,15 +36,15 @@
 
             <div class="col-3 mb-4">
                 <h6 class="fw-bolder">Disponible</h6>
-                <h5 class="fw-bolder">$730.000</h5>
+                <h5 class="fw-bolder"><!-- $730.000 --> {{ accountObject.total_amount_available | currency:'$':'symbol':'1.0-1':'es-CL'}} </h5>
             </div>
         </div>
 
 
         <div class="row d-flex justify-content-between">
             <div class="col-6"><h5 class="fw-bolder">Total Facturado</h5></div>
-            <div class="col-3"> <h5 class="fw-bolder">$120.000</h5></div>
-            
+            <div class="col-3"> <h5 class="fw-bolder"><!-- $730.000 --> {{ accountObject.total_amount_invoiced | currency:'$':'symbol':'1.0-1':'es-CL'}}  </h5></div>
+            <div class="col-6" style="font-size:.7em">Vencimiento: {{ accountObject.maximum_date_pay}}</div>
         </div>
     </div>
 

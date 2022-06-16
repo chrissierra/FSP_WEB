@@ -26,6 +26,7 @@
     "dateformat": "^5.0.3",
     "jquery": "^3.6.0",
     "ngx-cookie-service": "^13.2.1",
+    "ngx-spinner": "^13.1.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

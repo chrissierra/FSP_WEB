@@ -8,7 +8,7 @@ import { CustomersService } from '../../../services/customers.service';
 
 import { Customers } from '../../../interfaces/customers.interface';
 import { LocalCustomers } from '../../../interfaces/local-customers.interface'
-
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-mi-perfil',
@@ -24,6 +24,7 @@ export class MiPerfilComponent implements OnInit, OnDestroy {
 
 
   constructor(
+        private spinner: NgxSpinnerService,
         private fb: FormBuilder,
         private customersService: CustomersService,
         private localCustomersService: LocalCustomersService
@@ -55,6 +56,7 @@ export class MiPerfilComponent implements OnInit, OnDestroy {
   dv: string = ''
 
   ngOnInit(): void {
+    this.spinner.show();
     this.formCustomer = this.fb.group({
       age: [''],
       address: [''],
@@ -185,6 +187,8 @@ export class MiPerfilComponent implements OnInit, OnDestroy {
       })
 
     }
+
+    this.spinner.hide()
 
   }
 

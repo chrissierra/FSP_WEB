@@ -10,7 +10,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { EstadosDeCuentaComponent } from './estados-de-cuenta/estados-de-cuenta.component';
 import { CambiarClaveComponent } from './cambiar-clave/cambiar-clave.component';
 
-
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [IndexComponent, MiPerfilComponent, InicioComponent, EstadosDeCuentaComponent, CambiarClaveComponent],
@@ -20,6 +20,7 @@ import { CambiarClaveComponent } from './cambiar-clave/cambiar-clave.component';
     ReactiveFormsModule,
     UserAreaRoutingModule,
     ComponentsModule,
+    NgxSpinnerModule
   ]
 })
 export class UserAreaModule { }

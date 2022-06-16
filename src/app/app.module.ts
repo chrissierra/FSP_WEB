@@ -19,6 +19,9 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 
 
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+// Import library module
+import { NgxSpinnerModule } from "ngx-spinner";
 @NgModule({
   declarations: [
     AppComponent
@@ -31,13 +34,16 @@ import { FooterComponent } from './shared/footer/footer.component';
     ComponentsModule,
     RouterModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule
 
   ],
   exports:[
     NavbarComponent,
     FooterComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    NgxSpinnerModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

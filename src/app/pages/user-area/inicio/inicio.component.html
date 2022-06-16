@@ -3,9 +3,9 @@
     <div class="col-6" style="max-height:calc(100vh - 6em);">
 
                 
-        <app-outstanding-balance></app-outstanding-balance>
-        <app-account-statement></app-account-statement>
-
+        <app-outstanding-balance [accountObject]="objectAccountStatement"></app-outstanding-balance>
+        <app-account-statement [accountObject]="objectAccountStatement"></app-account-statement>
+        <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
 
     </div>
     <div class="col-6" style="max-height:calc(100vh - 6em);">

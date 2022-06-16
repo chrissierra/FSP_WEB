@@ -12,6 +12,7 @@ import { BeneficiosComponent } from './beneficios/beneficios.component';
 import { CaracteristicasTarjetaComponent } from './caracteristicas-tarjeta/caracteristicas-tarjeta.component';
 import { SegurosComponent } from './seguros/seguros.component';
 import { MuerteAccidentalComponent } from './muerte-accidental/muerte-accidental.component';
+import { InformacionAvanceComponent } from './informacion-avance/informacion-avance.component';
 const routes = [
   {
     path: '', 
@@ -56,6 +57,10 @@ const routes = [
       {
         path: 'muerte-accidental',
         component: MuerteAccidentalComponent
+      },
+      {
+        path: 'informacion-avance',
+        component: InformacionAvanceComponent,
       },
       {
         path: 'Prospects',

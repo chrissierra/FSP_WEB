@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomersService } from './../../../services/customers.service';
 import { Period, Item } from '../../../interfaces/periods.interface';
-
+import { NgxSpinnerService } from "ngx-spinner";
 @Component({
   selector: 'app-estados-de-cuenta',
   templateUrl: './estados-de-cuenta.component.html',
@@ -14,15 +14,21 @@ export class EstadosDeCuentaComponent implements OnInit {
   };
   hola: any;
   constructor(
-    private customersService: CustomersService
+    private customersService: CustomersService,
+    private spinner: NgxSpinnerService
     ) { }
     public useIcon: boolean = true;
   ngOnInit(
     ): void {
       // this.onStateAccount('11855134', '6')
+      this.spinner.show()
       this.customersService.getAccountStatementPeriods('11855134', '6').subscribe((data: any) =>{
         this.items = data;
         // console.log(this.items[3].nombre)
+      }, (err)=> {
+        console.log(err)
+      }, ()=> {
+        this.spinner.hide()
       })
     }
 

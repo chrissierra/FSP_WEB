@@ -54,6 +54,7 @@
                     class="btn-type-fsp" 
                     classIcon="bi bi-lock" 
                     (eClick)="eventoClick()" 
+                    
                     nombre="Mi Cuenta"></app-button-light-fsp>
                 </div>
                 <div class="col-10 col-sm-10 col-md-6 d-flex justify-content-end">  
@@ -110,8 +111,12 @@
         <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">Educación financiera</a>  -->
 
         <ul class="fsp-navbar d-flex justify-content-around" style="padding:0">
-            <li class="fsp-item-navbar text-center">
+            <li class="fsp-item-navbar text-center" [routerLink]="['/public']">
                 <a  >Inicio</a>
+            </li>
+
+            <li class="fsp-item-navbar  text-center" [routerLink]="['/public/educacion-financiera']">
+                <a  >Educación financiera</a>
             </li>
 
             <li class="fsp-item-navbar  text-center">
@@ -152,9 +157,7 @@
                 </ul>
             </li>
 
-            <li class="fsp-item-navbar  text-center" [routerLink]="['/public/educacion-financiera']">
-                <a  >Educación financiera</a>
-            </li>
+
         </ul> 
 
     </nav>
@@ -173,19 +176,40 @@
         class="btn-type-fsp" 
         classIcon="bi bi-lock" 
         (eClick)="eventoClick()" 
-        style="margin-right: -5em;"
+        style="margin-right: -2em;"
         nombre="Mi Cuenta"></app-button-light-fsp>
 
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
     <nav class="d-flex flex-column justify-content-around align-items-start flex-wrap mb-2 navbar" style="padding-left:1em">
-        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-house" style="margin-right:.5em"></i> Inicio</a>
-        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-credit-card" style="margin-right:.5em"></i>Tarjetas <i class="bi bi-chevron-down"></i></a>
-        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-cash-coin" style="margin-right:.5em"></i>Avances <i class="bi bi-chevron-down"></i></a>
-        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-card-heading" style="margin-right:.5em"></i>Seguros <i class="bi bi-chevron-down"></i></a>
-        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-gift" style="margin-right:.5em"></i>Club de beneficios</a>
-        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-wallet2" style="margin-right:.5em"></i>Paga tu cuenta <i class="bi bi-chevron-down"></i></a>
-        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-currency-exchange" style="margin-right:.5em"></i>Educación financiera</a>
+        <a  [routerLink]="['/public']"   class="p-2 text-dark fw-bold text-decoration-none">
+            <i class="bi bi-house" style="margin-right:.5em"></i> Inicio
+        </a>
+        
+        <a   [routerLink]="['/public/caracteristicas-tarjeta']" class="p-2 text-dark fw-bold text-decoration-none">
+            <i class="bi bi-credit-card" style="margin-right:.5em" ></i>Tarjetas <i class="bi bi-chevron-down"></i>
+        </a>
+        
+        <a  [routerLink]="['/public/avance']"  class="p-2 text-dark fw-bold text-decoration-none">
+            <i class="bi bi-cash-coin" style="margin-right:.5em" ></i>Avances <i class="bi bi-chevron-down"></i>
+        </a>
+        
+        <a [routerLink]="['/public/muerte-accidental']"  class="p-2 text-dark fw-bold text-decoration-none">
+            <i class="bi bi-card-heading" style="margin-right:.5em"  ></i>Seguros <i class="bi bi-chevron-down"></i>
+        </a>
+        
+        <a [routerLink]="['/public/beneficios']"  class="p-2 text-dark fw-bold text-decoration-none">
+            <i class="bi bi-gift" style="margin-right:.5em"  ></i>Club de beneficios
+        </a>
+        
+        <a [routerLink]="['/public/lugares-pago']"  class="p-2 text-dark fw-bold text-decoration-none">
+            <i class="bi bi-wallet2" style="margin-right:.5em" ></i>Paga tu cuenta <i class="bi bi-chevron-down"></i>
+        </a>
+        
+        <a [routerLink]="['/public/educacion-financiera']"  class="p-2 text-dark fw-bold text-decoration-none">
+            <i class="bi bi-currency-exchange" style="margin-right:.5em" ></i>Educación financiera
+        </a>
+
     </nav>
 
     <div class="d-flex align-items-end justify-content-center" style="height:100%; padding-bottom: 2em">

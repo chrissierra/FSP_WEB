@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SessionService } from 'src/app/services/session.service';
 import { SignInService } from 'src/app/services/sign-in.service';
 
@@ -9,7 +10,7 @@ import { SignInService } from 'src/app/services/sign-in.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private signInService: SignInService, private sessionService: SessionService) { }
+  constructor(private signInService: SignInService, private sessionService: SessionService, private router: Router) { }
   public useIconVar: boolean= true;
 
   ngOnInit(): void {
@@ -47,17 +48,23 @@ export class NavbarComponent implements OnInit {
 
   eventoClick(): void {
 
-    this.signInService.sendAuthorizationRequest()
-/*     const yourUrl = 'https://localhost:9443/samlartresolve'
-fetch(yourUrl, {
-    method: 'GET',
-    headers: new Headers({
-        'Access-Control-Allow-Origin': '*',
-    }),
-})
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err)); */
+    this.router.navigate(['/user-area'])
+
+
+    // TODO: Integrar login
+    // this.signInService.sendAuthorizationRequest()
+
+    
+    /*     const yourUrl = 'https://localhost:9443/samlartresolve'
+    fetch(yourUrl, {
+        method: 'GET',
+        headers: new Headers({
+            'Access-Control-Allow-Origin': '*',
+        }),
+    })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err)); */
 
     
 

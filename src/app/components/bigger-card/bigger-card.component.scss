@@ -1,7 +1,7 @@
 .bigger-card-fsp{
    /*  min-height: 35em; */
     border: 0;
-   
+    /* max-height: 20em; */
     border-radius: 16px;
     transition: transform 0.7s;
 
@@ -28,5 +28,13 @@
     .image-div{
       margin-bottom: 2em;
       padding:0.1em;
+    }
+
+    .card-body{
+      padding-top:2em;
+    }
+
+    .card-text{
+      margin-bottom: 2em;
     }
 }

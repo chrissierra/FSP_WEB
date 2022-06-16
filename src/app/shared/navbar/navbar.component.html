@@ -79,10 +79,10 @@
 
 <div class="d-flex justify-content-around" style="padding: 0 .9em">
     <nav class=" d-none d-md-flex justify-content-around" style="width:100%">
-<!--    <a href="#" class="p-2 text-dark fw-bold text-decoration-none items-navbar">Inicio</a>
+<!--    <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">Inicio</a>
 
         <div class="hovera">
-            <a href="#" class="p-2 text-dark fw-bold text-decoration-none items-navbar">
+            <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">
                 Tarjetas <i class="bi bi-chevron-down"></i>  </a>
                 
 
@@ -94,20 +94,20 @@
           
         </div>
 
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none items-navbar">
+        <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">
             Avances <i class="bi bi-chevron-down"></i>
             <div class="desplegable-header" ></div>
         </a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none items-navbar">
+        <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">
             Seguros <i class="bi bi-chevron-down"></i>
             <div class="desplegable-header" ></div>
         </a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none items-navbar">Club de beneficios</a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none items-navbar">
+        <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">Club de beneficios</a>
+        <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">
             Paga tu cuenta <i class="bi bi-chevron-down"></i>
             <div class="desplegable-header bigger-desplegable" ></div>
         </a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none items-navbar">Educación financiera</a>  -->
+        <a   class="p-2 text-dark fw-bold text-decoration-none items-navbar">Educación financiera</a>  -->
 
         <ul class="fsp-navbar d-flex justify-content-around" style="padding:0">
             <li class="fsp-item-navbar text-center">
@@ -163,13 +163,13 @@
 
 
 
-<div id="navbar" class="offcanvas offcanvas-start">
+<div id="navbar" class="offcanvas offcanvas-start" style="width:80%">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu</h5>
 
         <app-button-light-fsp 
         [useIcon]="useIconVar"
-        minWidthPropValue="12em"
+        minWidthPropValue="10em"
         class="btn-type-fsp" 
         classIcon="bi bi-lock" 
         (eClick)="eventoClick()" 
@@ -178,14 +178,14 @@
 
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-    <nav class="d-flex flex-column justify-content-around flex-wrap mb-2 navbar">
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none">Inicio</a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none">Tarjetas <i class="bi bi-chevron-down"></i></a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none">Avances <i class="bi bi-chevron-down"></i></a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none">Seguros <i class="bi bi-chevron-down"></i></a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none">Club de beneficios</a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none">Paga tu cuenta <i class="bi bi-chevron-down"></i></a>
-        <a href="#" class="p-2 text-dark fw-bold text-decoration-none">Educación financiera</a>
+    <nav class="d-flex flex-column justify-content-around align-items-start flex-wrap mb-2 navbar" style="padding-left:1em">
+        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-house" style="margin-right:.5em"></i> Inicio</a>
+        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-credit-card" style="margin-right:.5em"></i>Tarjetas <i class="bi bi-chevron-down"></i></a>
+        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-cash-coin" style="margin-right:.5em"></i>Avances <i class="bi bi-chevron-down"></i></a>
+        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-card-heading" style="margin-right:.5em"></i>Seguros <i class="bi bi-chevron-down"></i></a>
+        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-gift" style="margin-right:.5em"></i>Club de beneficios</a>
+        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-wallet2" style="margin-right:.5em"></i>Paga tu cuenta <i class="bi bi-chevron-down"></i></a>
+        <a   class="p-2 text-dark fw-bold text-decoration-none"><i class="bi bi-currency-exchange" style="margin-right:.5em"></i>Educación financiera</a>
     </nav>
 
     <div class="d-flex align-items-end justify-content-center" style="height:100%; padding-bottom: 2em">

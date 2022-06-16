@@ -108,9 +108,12 @@ a  {
     list-style: none;
     position: relative;
     border-bottom: .15em solid transparent;
+    padding-bottom: .8em;
+    margin-bottom: -1em;
     &:hover{
         border-bottom: .15em solid var(--color-fsp);
     }
+
 }
 
 
@@ -126,7 +129,8 @@ a  {
     transform: scaleY(0);
     transform-origin: top center;
     /* transform: translate(0,-10em); */
-    top: 110%;
+    top: 105%;
+    border-radius: .3em;
     
     /* left: -90%; */
     transition: all .3s;

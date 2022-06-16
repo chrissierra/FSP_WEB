@@ -37,7 +37,7 @@
 </div>
 
 
-<div class="row">
+<div>
 
   <table class="table table-hover">
       <thead>
@@ -48,9 +48,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">20/03/2022</th>
-          <td>Marzo - 2022 </td>
+        <tr *ngFor="let item of items; let i=index">
+          <td scope="row">{{ item.fecha_estado_cuenta}}</td>
+          <td> Marzo 2022</td>
           <td>        <app-button-fsp
               minWidthPropValue="12em"
               borderRadiusPropValue="4em"
@@ -60,7 +60,7 @@
               classIcon="bi bi-cloud-download"
               nombre="Descargar"></app-button-fsp></td>
         </tr>
-        <tr>
+        <!-- <tr>
           <th scope="row">20/03/2022</th>
           <td>Marzo - 2022 </td>
           <td>        <app-button-fsp
@@ -71,8 +71,7 @@
               classIcon="bi bi-cloud-download"
               class="d-flex align-items-center justify-content-center"
               nombre="Descargar"></app-button-fsp></td>
-        </tr>
-
+        </tr> -->
       </tbody>
     </table>
 </div>

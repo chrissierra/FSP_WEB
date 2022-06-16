@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index/index.component';
 import { RouterModule } from '@angular/router';
 import { ProspectosComponent } from './prospectos/prospectos.component';
+import { AvanceComponent } from './avance/avance.component';
 const routes = [
   {
     path: '', 
@@ -10,6 +11,10 @@ const routes = [
       {
         path: 'index',
         component: IndexComponent
+      },
+      {
+        path: 'avance',
+        component: AvanceComponent
       },
       {
         path: 'Prospects',

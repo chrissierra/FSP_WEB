@@ -8,13 +8,31 @@ import { AppModule } from 'src/app/app.module';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { RouterModule } from '@angular/router';
 import { ProspectosComponent } from './prospectos/prospectos.component';
+import { CaracteristicasTarjetaComponent } from './caracteristicas-tarjeta/caracteristicas-tarjeta.component';
+import { AvanceComponent } from './avance/avance.component';
+import { SuperAvanceComponent } from './super-avance/super-avance.component';
+import { InformacionAvanceComponent } from './informacion-avance/informacion-avance.component';
+import { MuerteAccidentalComponent } from './muerte-accidental/muerte-accidental.component';
+import { BeneficiosComponent } from './beneficios/beneficios.component';
+import { LugaresDePagoComponent } from './lugares-de-pago/lugares-de-pago.component';
+import { EducacionFinancieraComponent } from './educacion-financiera/educacion-financiera.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
 @NgModule({
   declarations: [
     IndexComponent,
-    ProspectosComponent
+    ProspectosComponent,
+    CaracteristicasTarjetaComponent,
+    AvanceComponent,
+    SuperAvanceComponent,
+    InformacionAvanceComponent,
+    MuerteAccidentalComponent,
+    BeneficiosComponent,
+    LugaresDePagoComponent,
+    EducacionFinancieraComponent,
+    InicioComponent
   ],
   imports: [
     CommonModule,

@@ -59,3 +59,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 /* Libreria cards */
 
+html{
+  touch-action: auto !important;
+}
+
+
+body{
+  touch-action: auto !important;
+}

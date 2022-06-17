@@ -21,3 +21,30 @@
     cursor:pointer;
 }
 
+
+.header-responsive{
+    height: 10em;
+    background-color: var(--color-fsp);
+    
+}
+
+.btn-responsive{
+    color: white;
+}
+
+.logo_responsive{
+    width: 3.5em;
+}
+
+.icon-menu-responsive{
+    color:white;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px){
+    .item-listado-menufsp {
+        border:none;
+        cursor: pointer;
+        font-size: .85em;
+    }
+}

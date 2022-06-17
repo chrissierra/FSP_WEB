@@ -44,4 +44,20 @@
     .container-inicio{
         max-height:10000px;
     }
+
+    .container-inicio{
+        position:relative;
+    }
+
+    .balance-posicionado{
+        position:relative;
+        top: -4em;
+        /* margin-bottom: -20em; */
+       /*  height: 55em ; */
+    }
+
+    .account-statement-posicionado {
+        position: relative;
+        top: -2em;
+    }
 }

@@ -48,11 +48,11 @@ export class NavbarComponent implements OnInit {
 
   eventoClick(): void {
 
-    this.router.navigate(['/user-area'])
+    //this.router.navigate(['/user-area'])
 
 
     // TODO: Integrar login
-    // this.signInService.sendAuthorizationRequest()
+     this.signInService.sendAuthorizationRequest()
 
     
     /*     const yourUrl = 'https://localhost:9443/samlartresolve'

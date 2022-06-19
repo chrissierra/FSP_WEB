@@ -5,8 +5,8 @@ export const environment = {
   RESPONSE_TYPE: "code",
   SCOPE: "openid",
   REDIRECT_URI: "https://christophersierradev.xyz/auth/login", // https://localhost:9000/login
-  CLIENT_ID: "aIS2mMCLA75T41XyblnfqPz2UCca",
-  CLIENT_SECRET: "mThgepHTwQYwlOO2W_qwhfDfkT8a",
+  CLIENT_ID: "RRwIKf1UfCySP1QGvmFVU1kqWZsa",
+  CLIENT_SECRET: "Dj44NbNZD9tFHPaKHU900bsjtmka",
   GRANT_TYPE: "authorization_code",
   CLIENT_URL: "https://christophersierradev.xyz/",
   LOGOUT_URL: "https://sister:9443/oidc/logout",

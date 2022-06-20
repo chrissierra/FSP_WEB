@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
           .then(response => {
               console.log("TOKEN REQUEST SUCCESS", response);
               localStorage.setItem('login2', JSON.stringify(response))
+              console.log(' this.sessionService.decodeIdToken(response.ID_TOKEN)',  this.sessionService.decodeIdToken(response.ID_TOKEN))
               localStorage.setItem('userName', JSON.stringify( this.sessionService.decodeIdToken(response.ID_TOKEN).sub ))
               this.sessionService.initAuthenticatedSession(response);
               this.router.navigate(['/user-area/index'])

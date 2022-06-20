@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
+import { Observable, tap } from 'rxjs';
 import { SessionService } from '../services/session.service';
 import { environment } from '../../environments/environment';
 import { SignOutService } from '../services/sign-out.service';
@@ -9,7 +9,7 @@ import { SignOutService } from '../services/sign-out.service';
 })
 export class ValidarCookiesGuard implements CanActivate, CanLoad {
 
-  constructor( private sessionService: SessionService, private signOut: SignOutService){
+  constructor(private router: Router, private sessionService: SessionService, private signOut: SignOutService){
     
   }
 
@@ -23,7 +23,7 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     console.log("Can load")
     console.log('token desde guard', token)
     
-    this.sessionService.validateJWT(token)
+/*     this.sessionService.validateJWT(token)
     .subscribe((data:any) => {
       
       console.log(data)
@@ -35,9 +35,16 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
       booleanResponse = true;
     })
 
-    return booleanResponse;
+    return booleanResponse; */
 
-
+    return this.sessionService.validateJWT(token)
+    .pipe(
+      tap(valid=>{
+        if(!valid){
+          this.router.navigateByUrl('/Public')
+        }
+      })
+      )
   }
 
   canActivate(
@@ -53,18 +60,14 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     console.log("Can load")
     console.log('token desde guard', token)
     
-    this.sessionService.validateJWT(token)
-    .subscribe((data:any) => {
-      console.log(data)
-      console.log('data.sub',data.sub)
-      
-    }, (err) => {
-      console.log('error', err)
-      this.signOut.logOut();
-      booleanResponse = true;
-    })
-
-    return booleanResponse;
+    return this.sessionService.validateJWT(token)
+    .pipe(
+      tap(valid=>{
+        if(!valid){
+          this.router.navigateByUrl('/Public')
+        }
+      })
+      )
 
   }
 

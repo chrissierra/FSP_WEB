@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, of, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HelperService } from './helper.service';
 
@@ -78,6 +79,12 @@ export class SessionService {
 
     
     return this.http.get(environment.JWT_ENDPOINT, { headers })
+    .pipe(
+      map( resp=>{
+        return true;
+      }),
+      catchError( err => of(false))
+    )
   }
 
 

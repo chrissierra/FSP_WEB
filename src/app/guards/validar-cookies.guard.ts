@@ -17,7 +17,10 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     // let authorizeRequest = `${ environment.AUTHORIZE_ENDPOINT }?response_type=${ environment.RESPONSE_TYPE }&scope=${ environment.SCOPE }&redirect_uri=${ environment.REDIRECT_URI }&client_id=${ environment.CLIENT_ID }`;
 
     const token = this.sessionService.getSessionParameter("ACCESS_TOKEN");
+
+
     console.log("Can load")
+    console.log('token desde guard', token)
     
     this.sessionService.validateJWT(token)
     .subscribe(data => {
@@ -37,22 +40,20 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
       console.log("Can canActivate")
 
 
-      let authorizeRequest = `${ environment.AUTHORIZE_ENDPOINT }?response_type=${ environment.RESPONSE_TYPE }&scope=${ environment.SCOPE }&redirect_uri=${ environment.REDIRECT_URI }&client_id=${ environment.CLIENT_ID }`;
+    const token = this.sessionService.getSessionParameter("ACCESS_TOKEN");
+    
+    console.log('token desde guard', token)
+    
+    console.log("Can load")
+    
+    this.sessionService.validateJWT(token)
+    .subscribe(data => {
+      console.log(data)
+    }, (err) => {
+      console.log('error', err)
+    })
 
-      const token = this.sessionService.getSessionParameter("ID_TOKEN");
-      
-  
-      if(!this.sessionService.isValidSession()){
-        return true; // return false;
-      }
-  
-      if(!this.sessionService.isSessionExpired()){
-        this.sessionService.resetAuthenticatedSession()
-        // window.location.href = `${environment.LOGOUT_URL}?id_token_hint=${token}&post_logout_redirect_uri=${environment.REDIRECT_URI}`;
-        return true; // return false;
-      }else{
-        return true;
-      }
+    return true;
   }
 
 

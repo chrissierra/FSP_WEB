@@ -14,24 +14,23 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
 
   canLoad(route: Route, segments: UrlSegment[]): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
 
-    let authorizeRequest = `${ environment.AUTHORIZE_ENDPOINT }?response_type=${ environment.RESPONSE_TYPE }&scope=${ environment.SCOPE }&redirect_uri=${ environment.REDIRECT_URI }&client_id=${ environment.CLIENT_ID }`;
+    // let authorizeRequest = `${ environment.AUTHORIZE_ENDPOINT }?response_type=${ environment.RESPONSE_TYPE }&scope=${ environment.SCOPE }&redirect_uri=${ environment.REDIRECT_URI }&client_id=${ environment.CLIENT_ID }`;
 
-    const token = this.sessionService.getSessionParameter("ID_TOKEN");
+    const token = this.sessionService.getSessionParameter("ACCESS_TOKEN");
     console.log("Can load")
     
+    this.sessionService.validateJWT(token)
+    .subscribe(data => {
+      console.log(data)
+    }, (err) => {
+      console.log('error', err)
+    })
 
-    if(!this.sessionService.isValidSession()){
-      return true; // return false;
-    }
+    return true;
 
-    if(!this.sessionService.isSessionExpired()){
-      this.sessionService.resetAuthenticatedSession()
-      // window.location.href = `${environment.LOGOUT_URL}?id_token_hint=${token}&post_logout_redirect_uri=${environment.REDIRECT_URI}`;
-      return true; // return false;
-    }else{
-      return true;
-    }
+
   }
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {

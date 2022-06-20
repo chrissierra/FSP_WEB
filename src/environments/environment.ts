@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   TOKEN_ENDPOINT: "https://localhost:9443/oauth2/token",
   AUTHORIZE_ENDPOINT: "https://localhost:9443/oauth2/authorize",
+  JWT_ENDPOINT: "https://localhost:9443/oauth2/userinfo?schema=openid",
   RESPONSE_TYPE: "code",
   SCOPE: "openid",
   REDIRECT_URI: "https://localhost:4200/auth/login", // https://localhost:9000/login

@@ -2,6 +2,7 @@ export const environment = {
   production: true,
   TOKEN_ENDPOINT: "https://identity.mobile.qa.grupochien.local:9443/oauth2/token",
   AUTHORIZE_ENDPOINT: "https://identity.mobile.qa.grupochien.local:9443/oauth2/authorize",
+  JWT_ENDPOINT: "https://identity.mobile.qa.grupochien.local:9443/oauth2/userinfo?schema=openid",
   RESPONSE_TYPE: "code",
   SCOPE: "openid",
   REDIRECT_URI: "https://christophersierradev.xyz/auth/login", // https://localhost:9000/login

@@ -30,11 +30,11 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
       return true;
     }, (err) => {
       console.log('error', err)
-      this.signOut.logOut();
+      //this.signOut.logOut();
       return false;
     })
 
-    return false;
+    return true;
 
 
   }
@@ -58,11 +58,11 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
       return true;
     }, (err) => {
       console.log('error', err)
-      this.signOut.logOut();
+      //this.signOut.logOut();
       return false;
     })
 
-    return false;
+    return true;
 
   }
 

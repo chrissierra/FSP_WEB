@@ -16,7 +16,8 @@ export class InicioComponent implements OnInit {
     const dv = '7' */
 
     const { rut, dv } = this.sessionService.getUser();
-
+    
+    console.log("this.sessionService.getUser()", this.sessionService.getUser())
     this.spinner.show()
     this.customerService.getAccountStatement(rut!, dv!)
     .subscribe((data: AccountStatement) => {

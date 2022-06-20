@@ -9,6 +9,7 @@ import { CustomersService } from '../../../services/customers.service';
 import { Customers } from '../../../interfaces/customers.interface';
 import { LocalCustomers } from '../../../interfaces/local-customers.interface'
 import { NgxSpinnerService } from "ngx-spinner";
+import { SessionService } from 'src/app/services/session.service';
 
 @Component({
   selector: 'app-mi-perfil',
@@ -27,7 +28,8 @@ export class MiPerfilComponent implements OnInit, OnDestroy {
         private spinner: NgxSpinnerService,
         private fb: FormBuilder,
         private customersService: CustomersService,
-        private localCustomersService: LocalCustomersService
+        private localCustomersService: LocalCustomersService,
+        private sessionService: SessionService
     ) { }
 
 
@@ -72,9 +74,11 @@ export class MiPerfilComponent implements OnInit, OnDestroy {
       rut: ['']
     })
 
-    this.rut = '18369890'
-    this.dv = '7'
+/*     this.rut = '18369890'
+    this.dv = '7' */
 
+    //let  { rut, dv } = this.sessionService.getUser();
+    console.log(this.sessionService.getUser().rut)
 // 11086413 2 birth_date: "07-07-1966"
 // 17158608 9 birth_date: "23-03-1989"  falla
 // 7866355 3 birth_date: "21-07-1955"   falla
@@ -103,7 +107,7 @@ export class MiPerfilComponent implements OnInit, OnDestroy {
   }
 
   async getCustomersByRut() {
-    this.customersService.getCustomersByRut(this.rut, this.dv)
+    this.customersService.getCustomersByRut(this.sessionService.getUser().rut, this.sessionService.getUser().dv)
     .pipe(
       tap(res => {
         this.dataRequest = res;

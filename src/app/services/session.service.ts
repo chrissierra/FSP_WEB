@@ -90,10 +90,13 @@ export class SessionService {
 
 
   getUser(){
+
+    console.log("localStorage.getItem('userName')", localStorage.getItem('userName'))
+    let rut = JSON.parse(  localStorage.getItem('userName') || 'null')
     if(localStorage.getItem('userName')){
       return {
-        rut: localStorage.getItem('userName')?.split('-')[0],
-        dv: localStorage.getItem('userName')?.split('-')[1],
+        rut: rut?.split('-')[0],
+        dv: rut?.split('-')[1],
       }
     }else{
       return {

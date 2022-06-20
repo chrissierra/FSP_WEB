@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
           expires_in: parseInt(session.EXPIRES_IN),
       };
 
-      
+      console.log("this.sessionService.decodeIdToken(session.ID_TOKEN).sub", this.sessionService.decodeIdToken(session.ID_TOKEN).sub)
 
       console.log('La sesión es válida', _tokenResponse)
       this.response_wso2 = _tokenResponse;
@@ -40,26 +40,34 @@ export class LoginComponent implements OnInit {
       console.log(this.sessionService.decodeIdToken(session.ID_TOKEN).exp > (new Date().getTime()/1000))
       console.log("ahora", (new Date().getTime()/1000))
       console.log("la hor d expiracion", this.sessionService.decodeIdToken(session.ID_TOKEN).exp) */
-      this.router.navigate(['/user-area/index'])
+     // this.router.navigate(['/user-area/index'])
       return;
     }
 
+
+
+
     const code = new URL(window.location.href).searchParams.get("code");
+
+
+
+
 
     if (code) {
       this.signInService.sendTokenRequest(code)
           .then(response => {
               console.log("TOKEN REQUEST SUCCESS", response);
+              console.log(" this.sessionService.decodeIdToken(response.ID_TOKEN)",  this.sessionService.decodeIdToken(response.access_token));
               localStorage.setItem('login2', JSON.stringify(response))
-              console.log(' this.sessionService.decodeIdToken(response.ID_TOKEN)',  this.sessionService.decodeIdToken(response.ID_TOKEN))
-              localStorage.setItem('userName', JSON.stringify( this.sessionService.decodeIdToken(response.ID_TOKEN).sub ))
+              console.log(' this.sessionService.decodeIdToken(response.ID_TOKEN)',  this.sessionService.decodeIdToken(response.access_token))
+              localStorage.setItem('userName', JSON.stringify( this.sessionService.decodeIdToken(response.access_token).sub ))
               this.sessionService.initAuthenticatedSession(response);
-              this.router.navigate(['/user-area/index'])
+              //this.router.navigate(['/user-area/index'])
 
           })
           .catch((error => {
               console.log("TOKEN REQUEST ERROR", error);
-              this.router.navigate(['/Public'])
+              //this.router.navigate(['/Public'])
           }));
   }
   }

@@ -17,6 +17,9 @@ export class OutstandingBalanceComponent implements OnInit {
   percentProgressBar(){
     const montoUsado = Number(this.accountObject.total_amount_used)
     const montoDisponible = Number(this.accountObject.total_amount_available)
+    console.log(montoDisponible)
+    console.log(montoUsado)
+    console.log("(montoUsado /montoDisponible) ", (montoUsado /montoDisponible) )
     return (montoUsado /montoDisponible) > 1? 100 : (montoUsado /montoDisponible)
   }
 

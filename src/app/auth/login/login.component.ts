@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
       console.log('La sesión es válida', _tokenResponse)
       this.response_wso2 = _tokenResponse;
       localStorage.setItem('login1', JSON.stringify(_tokenResponse))
+      localStorage.setItem('login3', JSON.stringify(this.sessionService.decodeIdToken(session.ID_TOKEN)))
 /*       console.log("this.sessionService.decodeIdToken(session.ID_TOKEN)", this.sessionService.decodeIdToken(session.ID_TOKEN));
       console.log(this.sessionService.decodeIdToken(session.ID_TOKEN).exp > (new Date().getTime()/1000))
       console.log("ahora", (new Date().getTime()/1000))

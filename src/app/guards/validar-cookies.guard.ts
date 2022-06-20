@@ -18,7 +18,7 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     // let authorizeRequest = `${ environment.AUTHORIZE_ENDPOINT }?response_type=${ environment.RESPONSE_TYPE }&scope=${ environment.SCOPE }&redirect_uri=${ environment.REDIRECT_URI }&client_id=${ environment.CLIENT_ID }`;
 
     const token = this.sessionService.getSessionParameter("ACCESS_TOKEN");
-    let booleanResponse = true;
+    let booleanResponse = false;
 
     console.log("Can load")
     console.log('token desde guard', token)
@@ -32,7 +32,7 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     }, (err) => {
       console.log('error', err)
       this.signOut.logOut();
-      booleanResponse = false;
+      booleanResponse = true;
     })
 
     return booleanResponse;
@@ -48,7 +48,7 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
 
     const token = this.sessionService.getSessionParameter("ACCESS_TOKEN");
     
-    let booleanResponse = true;
+    let booleanResponse = false;
 
     console.log("Can load")
     console.log('token desde guard', token)
@@ -61,7 +61,7 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     }, (err) => {
       console.log('error', err)
       this.signOut.logOut();
-      booleanResponse = false;
+      booleanResponse = true;
     })
 
     return booleanResponse;

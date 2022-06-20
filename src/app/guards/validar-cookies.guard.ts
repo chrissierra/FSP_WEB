@@ -41,6 +41,7 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     .pipe(
       tap(valid=>{
         if(!valid){
+          this.sessionService.resetAuthenticatedSession();
           this.router.navigateByUrl('/Public')
         }
       })
@@ -64,6 +65,7 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     .pipe(
       tap(valid=>{
         if(!valid){
+          this.sessionService.resetAuthenticatedSession();
           this.router.navigateByUrl('/Public')
         }
       })

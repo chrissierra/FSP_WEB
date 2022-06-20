@@ -3,12 +3,13 @@ import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, RouterStateSnapsho
 import { Observable } from 'rxjs';
 import { SessionService } from '../services/session.service';
 import { environment } from '../../environments/environment';
+import { SignOutService } from '../services/sign-out.service';
 @Injectable({
   providedIn: 'root'
 })
 export class ValidarCookiesGuard implements CanActivate, CanLoad {
 
-  constructor( private sessionService: SessionService){
+  constructor( private sessionService: SessionService, private signOut: SignOutService){
     
   }
 
@@ -23,13 +24,17 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     console.log('token desde guard', token)
     
     this.sessionService.validateJWT(token)
-    .subscribe(data => {
+    .subscribe((data:any) => {
       console.log(data)
+      console.log('data.sub',data.sub)
+      return true;
     }, (err) => {
       console.log('error', err)
+      this.signOut.logOut();
+      return false;
     })
 
-    return true;
+    return false;
 
 
   }
@@ -44,16 +49,21 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
     
     console.log('token desde guard', token)
     
-    console.log("Can load")
+    console.log("Can canActivate")
     
     this.sessionService.validateJWT(token)
-    .subscribe(data => {
+    .subscribe((data:any) => {
       console.log(data)
+      console.log('data.sub',data.sub)
+      return true;
     }, (err) => {
       console.log('error', err)
+      this.signOut.logOut();
+      return false;
     })
 
-    return true;
+    return false;
+
   }
 
 

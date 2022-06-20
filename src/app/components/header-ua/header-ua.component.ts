@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SignOutService } from 'src/app/services/sign-out.service';
 
 @Component({
   selector: 'app-header-ua',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderUaComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private signOut: SignOutService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,7 @@ export class HeaderUaComponent implements OnInit {
 
 
   logOut(){
+    this.signOut.logOut();
     this.router.navigate(['../index'])
   }
 }

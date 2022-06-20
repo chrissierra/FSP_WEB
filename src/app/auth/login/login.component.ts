@@ -48,12 +48,12 @@ export class LoginComponent implements OnInit {
           .then(response => {
               console.log("TOKEN REQUEST SUCCESS", response);
               this.sessionService.initAuthenticatedSession(response);
-              
+              this.router.navigate(['/user-area/index'])
 
           })
           .catch((error => {
               console.log("TOKEN REQUEST ERROR", error);
-
+              this.router.navigate(['/Public'])
           }));
   }
   }

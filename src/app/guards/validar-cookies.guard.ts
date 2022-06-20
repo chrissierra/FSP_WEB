@@ -22,20 +22,6 @@ export class ValidarCookiesGuard implements CanActivate, CanLoad {
 
     console.log("Can load")
     console.log('token desde guard', token)
-    
-/*     this.sessionService.validateJWT(token)
-    .subscribe((data:any) => {
-      
-      console.log(data)
-      console.log('data.sub',data.sub)
-      
-    }, (err) => {
-      console.log('error', err)
-      this.signOut.logOut();
-      booleanResponse = true;
-    })
-
-    return booleanResponse; */
 
     return this.sessionService.validateJWT(token)
     .pipe(

@@ -89,6 +89,23 @@ export class SessionService {
 
 
 
+  getUser(){
+    if(localStorage.getItem('userName')){
+      return {
+        rut: localStorage.getItem('userName')?.split('-')[0],
+        dv: localStorage.getItem('userName')?.split('-')[1],
+      }
+    }else{
+      return {
+        rut: '9700417',
+        dv: 'K'
+      }
+    }
+   
+  }
+
+
+
   /* 
     curl -k -H "Authorization: Bearer eyJ4NXQiOiJNell4TW1Ga09HWXdNV0kwWldObU5EY3hOR1l3WW1NNFpUQTNNV0kyTkRBelpHUXpOR00wWkdSbE5qSmtPREZrWkRSaU9URmtNV0ZoTXpVMlpHVmxOZyIsImtpZCI6Ik16WXhNbUZrT0dZd01XSTBaV05tTkRjeE5HWXdZbU00WlRBM01XSTJOREF6WkdRek5HTTBaR1JsTmpKa09ERmtaRFJpT1RGa01XRmhNelUyWkdWbE5nX1JTMjU2IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI5NzAwNDE3LUsiLCJhdXQiOiJBUFBMSUNBVElPTl9VU0VSIiwiYXVkIjoiYUlTMm1NQ0xBNzVUNDFYeWJsbmZxUHoyVUNjYSIsIm5iZiI6MTY1NTczNzUzMywiYXpwIjoiYUlTMm1NQ0xBNzVUNDFYeWJsbmZxUHoyVUNjYSIsInNjb3BlIjoib3BlbmlkIiwiaXNzIjoiaHR0cHM6XC9cL2xvY2FsaG9zdDo5NDQzXC9vYXV0aDJcL3Rva2VuIiwiZXhwIjoxNjU1NzM3NTczLCJpYXQiOjE2NTU3Mzc1MzMsImp0aSI6IjdkZThmNmRmLTNjNTgtNGI5YS1iMDM5LTJjZDE3ZmQ5ZWVmMCJ9.cttOm_7f4N7OMoZs6VKSIhXXS0EdN8-BRWXctZ9Tgj8pmi66KNilJIr5J8MJBfp_92vUN0nJqFM2g2fyOgEnfW5_4yuDPQDl5a0CvIXTkD3bRTQmUvUGRjHL0yjtDihVCtPq9yqjTft938WWtl6GHKhODE89ROIsJNgO7-1M_gmK1lfKIzxtv2ZFfNGLdYcQ5iamkik44QxlYVgQ_gQGY0F-mGqE7h1Nr9b1JfAQDxsVJQkbi1BdOiAPIRf4bVtLTRA9vZf5K40Kvp1dJhVF4BWFgSwnCSJ6wa9HxvkQhe16uCsLzuB78lmbrVjw1fn5xKNPdss5lPViztAcXixhtQ" https://identity.mobile.qa.grupochien.local:9443/oauth2/userinfo?schema=openid
     
